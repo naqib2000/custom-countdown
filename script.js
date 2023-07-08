@@ -12,8 +12,10 @@ const completeEl = document.getElementById("complete");
 const completeElInfo = document.getElementById("countdown-info");
 const completeBtn = document.getElementById("complete-button");
 
+// maintain the variables type throughout its lifetime for better readability and performance
 let countdownTitle = "";
 let countdownDate = "";
+// new keyword to instantiate date object to create something out of it
 let countdownValue = new Date();
 let countdownActive;
 let saveCountdown;
