@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Countdown</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Video Background -->
+    <video class="video-background" loop muted autoplay></video>
+    <div class="video-overlay"></div>
+    <!-- container -->
+    <div class="container">
+      <div class="input-container" id="input-container">
+        <h1>Create a Custom Countdown</h1>
+        <!-- don't need action because button will be used to submit -->
+        <form action="" class="form" id="countdownForm">
+          <!-- for attribute should match id for input for accessability -->
+          <label for="title">Title</label>
+          <input
+            type="text"
+            id="title"
+            placeholder="What are you counting down to?"
+          />
+          <label for="date-picker">Select a Date</label>
+          <input type="date" id="date-picker" />
+          <!-- this will throw an event when we submit the form that pass the form values-->
+          <!-- we will then use a function to do something with the data -->
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <!-- countdowns -->
+      <div class="countdown" id="countdown" hidden>
+        <h1 id="countdown-title"></h1>
+        <ul>
+          <li><span></span>Days</li>
+          <li><span></span>Hours</li>
+          <li><span></span>Minutes</li>
+          <li><span></span>Seconds</li>
+        </ul>
+        <button id="countdown-button">Reset</button>
+      </div>
+      <!-- complete -->
+      <div class="complete" id="complete" hidden>
+        <h1 class="complete-title">Countdown Compete</h1>
+        <h1 id="countdown-info"></h1>
+        <button id="complete-button">New Countdown</button>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
